@@ -15,11 +15,11 @@ It sets up the metrics client using OpenTelemetry APIs and send the metrics data
 
 - Go to the Google Cloud Console and go to Cloud Functions.
 - Create a new function named `opentelemetry-intro-gcf-scala`.
-- ![](images/Pasted image 20240503181020.png)
+- ![](./images/Pasted image 20240503181020.png)
 - Click next
-- ![](images/Pasted image 20240503181656.png)
+- ![](./images/Pasted image 20240503181656.png)
 - After Deployment, a URL will appear at the top that represents the function invocation URL. 
-- ![](images/Pasted image 20240503182309.png)
+- ![](./images/Pasted image 20240503182309.png)
 
 ## Deploy - CLI
 
@@ -62,6 +62,6 @@ custom_googleapis_com:function_opentelemetry_intro_gcf_scala_danish_requests{mon
 ```
 
 You may see the following chart.
-![](images/Pasted image 20240507140938.png)
+![](./images/Pasted image 20240507140938.png)
 
 **Note:** If the metrics are not visible, see the logs, there might be `DEADLINE_EXCEEDED` error messages or any other errors from the exporter. They are intermittent and are resolved automatically. If the application is critical, one can use Collector as a proxy between the app and the Google Monitoring Service backend.  
