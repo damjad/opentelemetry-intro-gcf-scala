@@ -31,6 +31,7 @@ object Telemetry {
     // Create a backend exporter for sending metrics.
     val metricConfiguration = MetricConfiguration
       .builder()
+      .setDeadline(Duration.ofSeconds(60))
       .setPrefix(s"custom.googleapis.com/function/${resource.getAttribute(ResourceAttributes.FAAS_NAME)}")
       .build()
     val metricExporter = GoogleCloudMetricExporter.createWithConfiguration(metricConfiguration)
